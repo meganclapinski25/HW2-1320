@@ -5,7 +5,7 @@ function POPOSSpace(props) {
   return (
     <div>
       <img
-        src={`${process.env.PUBLIC_URL}/${image}`}
+        src={`${process.env.PUBLIC_URL}/images/${image}`}
         width="300"
         height="300"
         alt="Hello"
