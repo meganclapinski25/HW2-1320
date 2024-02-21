@@ -12,6 +12,7 @@
     margin-bottom: 2em;
     background-color: rgb(192, 45, 26);
     color: #fff;
+<<<<<<< HEAD:src/Title.css
     
   }
   
@@ -37,3 +38,17 @@
   }
   
   
+=======
+  }
+  .Title a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: rgba(255, 255, 255, 0.835);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .Title .nav-link-active {
+    color: #fff;
+    border-bottom: 2px solid;
+  }
+>>>>>>> aa639cafd2cb0068bb5493a368e8bb67c1d40623:src/components/Title.css
