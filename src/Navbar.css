@@ -1,0 +1,22 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-item {
+    margin: 0 1em; /* Adjust spacing between navbar items as needed */
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: #fff; /* Set color to white */
+    font-weight: bold;
+  }
+  

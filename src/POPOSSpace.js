@@ -1,5 +1,5 @@
 import logo from './logo.svg'
-
+import './POPOSSpace.css';
 function POPOSSpace(props) {
   const { name, image, address } = props
   return (
@@ -17,3 +17,5 @@ function POPOSSpace(props) {
 }
 
 export default POPOSSpace
+
+//hi
