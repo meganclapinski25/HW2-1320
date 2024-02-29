@@ -1,8 +1,9 @@
 .footer {
-    background: linear-gradient(to top, #787675, #ffffff);
+    background-color: aqua;
     color: black;
     padding: 20px;
     text-align: center;
+    
   }
   
   .footer-text {

@@ -1,9 +1,10 @@
 import React from 'react';
+import "./Footer.css"
 
 const Footer = () => {
   return (
     <footer>
-      <p>Mitchell Hudson cpoyright 2019</p>
+      <p>Mitchell Hudson copyright 2019</p>
     </footer>
   );
 };

@@ -12,14 +12,9 @@
     margin-bottom: 2em;
     background-color: rgb(192, 45, 26);
     color: #fff;
-<<<<<<< HEAD:src/Title.css
+
     
   }
-  
-  
-  
-  
-  
   
   .navbar-list {
     list-style: none;
@@ -36,10 +31,6 @@
     color: #333; 
     font-weight: bold;
   }
-  
-  
-=======
-  }
   .Title a {
     display: inline-block;
     padding: 0.5em 1em;
@@ -51,4 +42,3 @@
     color: #fff;
     border-bottom: 2px solid;
   }
->>>>>>> aa639cafd2cb0068bb5493a368e8bb67c1d40623:src/components/Title.css

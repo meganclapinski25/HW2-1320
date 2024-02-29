@@ -21,7 +21,7 @@ root.render(
         <Route path="/details/:id" element={<POPOSDetails />} />
       </Route>
     </Routes>
-  </Router>,
+  </Router>
   //document.getElementById('root')
 );
 

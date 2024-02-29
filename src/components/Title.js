@@ -1,7 +1,8 @@
 import React from 'react'
 import './Title.css';
 import { NavLink } from 'react-router-dom'
-import RandomSpace from './RandomSpace/RandomSpace';
+import RandomSpace from './RandomSpace/RandomSpace'
+
 
 
 
