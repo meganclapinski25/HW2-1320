@@ -1,6 +1,6 @@
 /*  src/Title.css  */
 .Title {
-  box-sizing: border-box;
+  margin-left: 3px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -45,4 +45,24 @@
   .Title .nav-link-active {
     color: #fff;
     border-bottom: 2px solid;
+  }
+  .search-bar{
+      margin-top: 20px;
+      padding: 5px;
+      max-width: 300px;
+      margin-left: auto;
+  }
+  @media screen and (max-width: 425px) {
+    .Title {
+      flex-direction: column;
+      align-items: flex-start;
+      
+    }
+  
+    .search-bar {
+      margin-top: 20px;
+      width: calc(100% - 20px);
+      max-width: 300px;
+      margin-left: auto;
+    }
   }

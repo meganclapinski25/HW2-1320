@@ -1,7 +1,7 @@
 import React from 'react';
-import "./Footer.css"
+import './Footer.css';
 
-const Footer = () => {
+function Footer () {
   return (
     <footer>
       <p>Mitchell Hudson copyright 2019</p>

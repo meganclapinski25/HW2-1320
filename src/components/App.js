@@ -2,8 +2,8 @@
 import { Outlet } from 'react-router-dom'
 import './App.css';
 import Title from './Title';
-
 import Footer from './Footer';
+import './Footer.css';
 
 function App() {
   return (

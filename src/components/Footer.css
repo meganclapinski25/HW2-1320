@@ -1,9 +1,9 @@
-.footer {
+.footer p {
     background-color: aqua;
     color: black;
     padding: 20px;
     text-align: center;
-    
+    flex-shrink: 0;
   }
   
   .footer-text {

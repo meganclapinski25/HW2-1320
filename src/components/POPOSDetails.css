@@ -27,3 +27,21 @@
 .POPOSDetails .POPOSDetails-hours {
 	font-size: 1.5em;
 }
+
+@media screen and (max-width:425px){
+	.POPOSDetails{
+		flex-direction: column;
+		width: 100%;
+	}
+	.POPOSDetails .POPOSDetails-info,
+    .POPOSDetails .POPOSDetails-image {
+        flex: none; 
+        width: fit-content; 
+		align-self: center;
+    }
+	.POPOSDetails .POPOSDetails-image img {
+		align-items: center;
+       	width: 300px; 
+        height: auto; 
+    }
+}
