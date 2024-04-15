@@ -8,6 +8,7 @@
 .POPOSSpace .POPOSSpace-title {
     text-decoration: none;
     color: #000;
+    
   }
   
   .POPOSSpace h1 {
@@ -32,4 +33,11 @@
 	display: inline-block;
 	padding: 0.25em 0.5em;
 	background-color: rgba(255, 255, 255, 0.9);
+}
+@media screen and (min-width: 768px){
+  .POPOSSpace h1{
+    font-size: large;
+    font-weight: 500;
+  }
+
 }

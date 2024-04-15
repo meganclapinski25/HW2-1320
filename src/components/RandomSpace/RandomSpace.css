@@ -1,11 +1,12 @@
 .RandomSpace {
-    background-color: rgb(12, 152, 23);
+    background-color: #4c6b4d;
     color: #fff;
-    padding:  10px;
+    padding:  5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin: 5px;
   }
   
   .RandomSpace:hover {
