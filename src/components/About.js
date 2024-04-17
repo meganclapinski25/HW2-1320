@@ -17,14 +17,40 @@ function About() {
               Francisco, POPOS mostly appear in the Downtown
               office district area.</p>
         </div>
+        
       
       </div>
       <div className='container'>
         <div className='amenities'>
             <h1>Amenities</h1>
+            <ul className='items'>
+              <li>
+              🌲 - Enjoy fresh air and chirping birds
+              </li>
+              <li>
+	            ☕️ - Get a cup of coffee to stay engerized
+              </li>
+              <li>
+	          	🖼 - Unwind and ponder at the sight of art pieces
+              </li>
+              <li>
+	          	🚽 - Don't be worried on your journey
+              </li>
+              <li>
+	            🔌 - Charge you phones to take pictures, or your laptops to do work 
+              </li>
+            </ul>
         </div>
         <div className='interest-points'>
             <h1>Interest Points</h1>
+            <ul className='items'>
+              <li>TransAmerica Pyramid</li>
+              <li>The Ferry Building</li>
+              <li>SalesForce Tower</li>
+              <li> Old St. Mary's Cathedral</li>
+              <li>Bart - Embarcadero</li>
+              <li>Bart - Montgomery St</li>
+            </ul>
         </div>
       </div>
     </div>
