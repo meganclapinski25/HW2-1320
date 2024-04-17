@@ -17,7 +17,7 @@
   
   .Title .items{
     display: flex;
-    
+    text-align: center;
     justify-content: center; /* Horizontally center */
     align-items: center;
   }

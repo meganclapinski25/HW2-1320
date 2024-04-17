@@ -1,16 +1,29 @@
-.h1{
-    font-size: 24px;
-    color: #333;
+.container{
+    display: flex;
+    align-items: center;
 }
-.p{
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
+.image{
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    
+    
 }
-.div{
-    border: 10px;
-    border-color: grey;
-    max-width: 600px;
-    margin: 0 auto;
+.amendities {
+    flex: 0 0 50%;
+    display: flex;
     padding: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+.interest-points{
+    flex: 0 0 50%;
+    max-width: 600px;
+}
+.about-me{
+    flex: 0 0 50%;
+    max-width: 600px;
 }
