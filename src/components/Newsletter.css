@@ -1,0 +1,21 @@
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .subscription-form {
+    margin-bottom: 20px;
+  }
+  
+  .subscription-form input {
+    margin-bottom: 10px;
+    width: 200px;
+  }
+  
+  .thank-you {
+    text-align: center;
+  }
+  

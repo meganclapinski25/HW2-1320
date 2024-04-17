@@ -16,10 +16,13 @@ function Title() {
         <div className='items' >
           <NavLink 
             className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
-            to="/">List</NavLink>
+            to="/">Home</NavLink>
           <NavLink 
             className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
             to="/about">About</NavLink>
+            <NavLink 
+            className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
+            to="/home">List</NavLink>
             <RandomSpace /> 
             {/* when button is active make it responsive */}
             
