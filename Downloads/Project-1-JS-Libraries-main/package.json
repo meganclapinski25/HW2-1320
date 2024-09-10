@@ -1,0 +1,20 @@
+{
+  "name": "project-1---js-libraries",
+  "version": "1.0.0",
+  "description": "A Js Library for a deck of cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "jest": "^29.7.0",
+    "rollup": "^4.21.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.6.2"
+  }
+}
