@@ -1,0 +1,1 @@
+! A deck of card JS Library that contains 2 classes and 11 methods. 
