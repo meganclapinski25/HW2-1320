@@ -1,115 +1,123 @@
 extends layout
 
+
 block content
-  .container
-    .row 
-      .offset-lg-2.col-lg-8
-        if currentUser && user.id == currentUser.id && !user.publishedAt
-          .text-center.alert.alert-warning.mb-3.p-3.mt-3
-            p 
-              | Your portfolio is a #[b private draft] and is not available to recruiters. 
-              br
-              | To make your portfolio public, become a member.
-              p Use the coupon code #[b FALL2023] to get 20% off.
-            a.btn.btn-primary(href='/publish') Become a Member
-        .row.my-4
-          .offset-1.col-10
-            if user.github 
-              .row 
-                .offset-md-4.col-md-4.offset-2.col-8
-                  .text-center
-                    img.rounded-circle.img-fluid.mb-4(src=`https://github.com/${user.github}.png`)
-            h3.text-center= user.fullName 
-            p.text-center.text-muted= user.goalTitle
-            p.text-center.text-muted= user.skills
-            p.text-center.mb-3= user.bio  
-            p.text-center.mb-3= user.goals 
-
-    .row.mt-5.mb-5.text-center.d-flex.justify-content-center
-      if user.github
-        .col-2
-          a(href=`https://www.github.com/${user.github}` alt="Text" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="GitHub")
-            i(data-feather="github")
-      if user.linkedin
-        .col-2
-          a(href=`https://www.linkedin.com/in/${user.linkedin}` alt="Text" target="_blank"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Linkedin") 
-            i(data-feather="linkedin")
-      if user.twitter
-        .col-2
-          a(href=`https://www.twitter.com/${user.twitter}` alt="Text" target="_blank"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="X") 
-            i(data-feather="x")
-      if user.website
-        .col-2
-          a(href=user.website alt="Text" target="_blank"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Website") 
-            i(data-feather="layout")
-      if user.blog
-        .col-2
-          a(href=user.blog alt="Text" target="_blank"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Blog") 
-            i(data-feather="bookmark")
-
-    .my-3
-
-    .row 
-      .col-12
-        .d-flex.justify-content-between
-          h4 Projects
-          
-          if currentUser && user.id == currentUser.id
-            a.btn.btn-primary(href=`/elements/new?role=PROJECT`) Add Project
-        hr
-
-    .row
-      for p in projects
-        .col-lg-6.col-xl-4.my-2
-          .border.p-3.rounded
-            h5.mb-3= p.title
-            if p.imgUrl
-              p
-                if p.url 
-                  a(href=p.url target="_blank") #[img.img-fluid(src=p.imgUrl)]
-                else 
-                  img.img-fluid(src=p.imgUrl)
-            p.text-muted= p.tools
-            p= p.desc 
-            if p.url
-              a.btn.btn-icon(href=p.url target="_blank")
-                i(data-feather="external-link")
-            if p.codeUrl
-              a.btn.btn-icon.m-x(href=p.codeUrl target="_blank")
-                i(data-feather="github")
-            a.btn.u-pull-right(href=`/elements/${p.id}/edit`) Edit
+ .container
+   .row
+     .offset-lg-2.col-lg-8
+       if currentUser && user.id == currentUser.id && !user.publishedAt
+         .text-center.alert.alert-warning.mb-3.p-3.mt-3
+           p
+             | Your portfolio is a #[b private draft] and is not available to recruiters.
+             br
+             | To make your portfolio public, become a member.
+             p Use the coupon code #[b FALL2023] to get 20% off.
+           a.btn.btn-primary(href='/publish') Become a Member
+       .row.my-4
+         .offset-1.col-10
+           if user.github
+             .row
+               .offset-md-4.col-md-4.offset-2.col-8
+                 .text-center
+                   img.rounded-circle.img-fluid.mb-4(src=`https://github.com/${user.github}.png`)
+           h3.text-center= user.fullName
+           p.text-center.text-muted= user.goalTitle
+           p.text-center.text-muted= user.skills
+           p.text-center.mb-3= user.bio 
+           p.text-center.mb-3= user.goals
 
 
-    .d-flex.justify-content-between.mt-5
-      h4 Publications
-      if currentUser && user.id == currentUser.id
-        a.btn.btn-primary(href=`/elements/new?role=ARTICLE`) Add Publications
-    hr.my-3    
-    .row
-      for a in articles
-        .col-lg-6.col-xl-4.mb-3
-          .border.p-3.rounded
-            h5.mb-3= a.title
-            if a.imgUrl 
-              p
-                if a.url
-                  a(href=a.url target="_blank") #[img.img-fluid(src=a.imgUrl)]
-                else 
-                  img.img-fluid(src=a.imgUrl)
-            p= a.desc 
-            if a.url 
-              a.btn.btn-icon(href="#" class="open-iframe" data-url=a.url) 
-                i(data-feather="external-link")
-            
-            a.btn.u-pull-right(href=`/elements/${a.id}/edit`) Edit
-    //- Side Panel for iframe
-    div#sidePanel
-      div#closePanel Close
-      iframe#iframe(sandbox="allow-scripts allow-same-origin" src="" width="100%" height="calc(100% - 40px)" style='border: none;')
+   .row.mt-5.mb-5.text-center.d-flex.justify-content-center
+     if user.github
+       .col-2
+         a(href=`https://www.github.com/${user.github}` alt="Text" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="GitHub")
+           i(data-feather="github")
+     if user.linkedin
+       .col-2
+         a(href=`https://www.linkedin.com/in/${user.linkedin}` alt="Text" target="_blank"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Linkedin")
+           i(data-feather="linkedin")
+     if user.twitter
+       .col-2
+         a(href=`https://www.twitter.com/${user.twitter}` alt="Text" target="_blank"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="X")
+           i(data-feather="x")
+     if user.website
+       .col-2
+         a(href=user.website alt="Text" target="_blank"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Website")
+           i(data-feather="layout")
+     if user.blog
+       .col-2
+         a(href=user.blog alt="Text" target="_blank"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Blog")
+           i(data-feather="bookmark")
 
-    
-    //- hr
-    //- if user.id == currentUser.id
-    //-   a.u-pull-right.btn.btn-primary(href=`/elements/new`) Add Education
-    //- h4 Education
+
+   .my-3
+
+
+   .row
+     .col-12
+       .d-flex.justify-content-between
+         h4 Projects
         
+         if currentUser && user.id == currentUser.id
+           a.btn.btn-primary(href=`/elements/new?role=PROJECT`) Add Project
+       hr
+
+
+   .row
+     for p in projects
+       .col-lg-6.col-xl-4.my-2
+         .border.p-3.rounded
+           h5.mb-3= p.title
+           if p.imgUrl
+             p
+               if p.url
+                 a(href=p.url target="_blank") #[img.img-fluid(src=p.imgUrl)]
+               else
+                 img.img-fluid(src=p.imgUrl)
+           p.text-muted= p.tools
+           p= p.desc
+           if p.url
+             a.btn.btn-icon(href=p.url target="_blank")
+               i(data-feather="external-link")
+           if p.codeUrl
+             a.btn.btn-icon.m-x(href=p.codeUrl target="_blank")
+               i(data-feather="github")
+           a.btn.u-pull-right(href=`/elements/${p.id}/edit`) Edit
+
+
+
+
+   .d-flex.justify-content-between.mt-5
+     h4 Publications
+     if currentUser && user.id == currentUser.id
+       a.btn.btn-primary(href=`/elements/new?role=ARTICLE`) Add Publications
+   hr.my-3   
+   .row
+     for a in articles
+       .col-lg-6.col-xl-4.mb-3
+         .border.p-3.rounded
+           h5.mb-3= a.title
+           if a.imgUrl
+             p
+               if a.url
+                 a(href=a.url target="_blank") #[img.img-fluid(src=a.imgUrl)]
+               else
+                 img.img-fluid(src=a.imgUrl)
+           p= a.desc
+           if a.url
+             a.btn.btn-icon(href="#" class="open-iframe" data-url=a.url)
+               i(data-feather="external-link")
+          
+           a.btn.u-pull-right(href=`/elements/${a.id}/edit`) Edit
+   //- Side Panel for iframe
+   div#sidePanel
+     div#closePanel Close
+     iframe#iframe(sandbox="allow-scripts allow-same-origin" src="" width="100%" height="calc(100% - 40px)" style='border: none;')
+
+
+  
+   //- hr
+   //- if user.id == currentUser.id
+   //-   a.u-pull-right.btn.btn-primary(href=`/elements/new`) Add Education
+   //- h4 Education
+     
