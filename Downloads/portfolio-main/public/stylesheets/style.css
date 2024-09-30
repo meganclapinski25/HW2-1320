@@ -1,0 +1,248 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.flexwrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  padding: 5rem; 
+  border-top: 1px #eee solid;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #33c3f0;
+  border:#78d3ee;
+  margin-right: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #3792ae;
+  border:#28768e;
+}
+
+.shape-left {
+  position: absolute;
+  left:-30px;
+}
+
+.shape-right {
+  position: absolute;
+  right:-50px;
+}
+
+.diamond {
+  z-index: -1;
+  height: 250px;
+  width: 250px;
+  transform: rotate(32deg);
+} 
+
+.square {
+  z-index: -1;
+  height: 450px;
+  width: 450px;
+  border-radius: 30%;
+  transform: rotate(74deg); 
+}
+
+.circle {
+  z-index: -1;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+}
+
+.teal {
+  opacity: 40%;
+  background-color: #7FDBFF;
+}
+
+.orange {
+  opacity: 50%;
+  background-color: #ff9d7f;
+}
+
+.dark {
+  opacity:80%;
+  background-color: rgb(104, 104, 104);
+}
+
+.green {
+  opacity:50%;
+  background-color: #78d3ee;
+}
+
+.up {
+  top:-50px;
+}
+
+.down {
+  bottom: -950px;
+  left: -100px;
+}
+
+/* Desktop Screens */
+@media screen and (max-width: 1280px) and (min-width: 1200px) {
+  .navbar-expand-lg {
+    width: 1380px;
+  }
+
+  .alert-info {
+    width: 1380px;
+  }
+
+  .flexwrapper {
+    width: 1290px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 1000px) {
+  .navbar-expand-lg {
+    width: 1140px;
+  }
+
+  .alert-info {
+    width: 1140px;
+  }
+
+  .flexwrapper {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 912px) and (min-width: 900px) {
+  .navbar-expand-lg {
+    width: 980px;
+  }
+
+  .alert-info {
+    width: 1100px;
+  }
+}
+
+/* Tablet Screens */
+@media screen and (max-width: 768px) and (min-width: 700px) {
+  .navbar-expand-lg {
+    width: 866px;
+  }
+
+  .alert-info {
+    width: 866px;
+  }
+
+  .flexwrapper {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 540px) and (min-width: 500px) {
+  .navbar-expand-lg {
+    width: 640px;
+  }
+
+  .alert-info {
+    width: 640px;
+  }
+
+  .flexwrapper {
+    width: 590px;
+    text-align: left;
+  }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 430px) {
+  .form-control {
+    width: 87%;
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    margin-top: 14px;
+  }
+
+  .up {
+    left: 39px;
+  }
+
+  .input-group .btn {
+    margin-bottom: 9px;
+  }
+
+  .flexwrapper {
+    min-width: 531px;
+  }
+} 
+
+#sidePanel {
+  display: none; 
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+  z-index: 1000;
+}
+
+#sidePanel iframe {
+  border: none;
+}
+#closePanel {
+  cursor: pointer;
+  padding: 10px;
+  background: #f44336;
+  color: white;
+  text-align: center;
+}
